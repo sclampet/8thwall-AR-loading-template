@@ -18,6 +18,10 @@ The following is a live application I have built for Sony that uses this code st
 
 * Spider-Man Into The Spider-Verse: https://sites.sonypictures.com/spiderverse/spiderversear/
 
+# Getting Started
+
+Please follow this [Getting Started](https://github.com/8thwall/web/tree/master/gettingstarted)
+
 # Graphics Info
 
 This project does not include graphics. However, you can add your own and name rename them to the following...
