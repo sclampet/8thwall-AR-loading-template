@@ -4,19 +4,19 @@
 
 The following is a starting off point for getting started in Web AR. This does not include any code that deals with the actual 3D scene. This is just for the initial loading process which includes the following...
 
-* Detecting if the user is not on a supported device or browser, and providing helpful information for how to view the XR experience.
+1. Detecting if the user is not on a supported device or browser, and providing helpful information for how to view the XR experience.
 
-* Displaying a loading overlay and camera permissions prompt while the scene and libraries are loading, and while the camera is starting up.
+2. Displaying a loading overlay and camera permissions prompt while the scene and libraries are loading, and while the camera is starting up.
 
-* Hiding the scene and showing an error image when an error occurs at runtime.
+3. Hiding the scene and showing an error image when an error occurs at runtime.
 
-* Displaying an overlay graphic when the user turns device to enter Landscape mode.
+4. Displaying an overlay graphic when the user turns device to enter Landscape mode.
 
-# Live Examples
+# Live Example
 
-The following are live apps I have built that use this code structure.
+The following is a live application I have built for Sony that uses this code structure.
 
-
+* Spider-Man Into The Spider-Verse: https://sites.sonypictures.com/spiderverse/spiderversear/
 
 # Graphics Info
 
