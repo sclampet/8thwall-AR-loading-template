@@ -1,0 +1,151 @@
+* {
+  font-family: inherit;
+  box-sizing: inherit;
+}
+
+.absolute-fill {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.hidden {
+  display: none;
+}
+
+#photoModeContainer {
+  /* z-index: 999; */
+  pointer-events: none;
+  box-sizing: border-box;
+  visibility: hidden;
+}
+
+#photoModeContainer, #photoModeContainer * {
+  transition: 0.5s;
+}
+
+#photoModeShutterButton {
+  z-index: 11;
+  pointer-events: auto;
+  position: absolute;
+  width: 20vmin;
+  height: 20vmin;
+  bottom: 1.5vmax;
+  left: calc(50vw - 10vmin);
+  border: 2vmin solid white;
+  padding: 1vmin;
+  border-radius: 10vmin;
+  filter: drop-shadow(1px 1px 7px #00000026);
+  transition: 0.5s, left 0s;
+}
+
+.photoModeCollapsed  #photoModeShutterButton, .photoModeTutorial  #photoModeShutterButton {
+  pointer-events: none;
+  bottom: -10vmin;
+  opacity: 0;
+}
+
+.photoModeSave #photoModeShutterButton {
+  opacity: 0.5;
+}
+
+#photoModeShutterButtonInner {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  transition: 0.15s;
+}
+
+.photo-mode-shutter-click #photoModeShutterButtonInner{
+  transform: scale(0.8);
+}
+
+#photoModeImageContainer {
+  position: absolute;
+  z-index: 13;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%,-50%);
+  border-radius: 2vmin;
+  overflow: hidden;
+  box-shadow: 0 1vmin 2vmin -0.5vmin rgba(0,0,0,0.5);
+  background-color: white;
+}
+
+.photoModeCollapsed  #photoModeImageContainer,
+.photoModeCapture #photoModeImageContainer {
+  opacity: 0;
+}
+
+#photoModeImage {
+  max-width: 70vw;
+  max-height: 70vh;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.photoModeCollapsed  #photoModeImage,
+.photoModeCapture #photoModeImage {
+  transform: scale(1.4);
+}
+
+.photoModeSave #photoModeImage {
+  transform: scale(1);
+  pointer-events: auto;
+}
+
+#photoModeSavePrompt {
+  font-size: 6vmin;
+  padding: 2vmin;
+  color: black;
+  text-align: center;
+  background-color: white;
+}
+
+#photoModeHoldFeedback {
+  z-index: 20;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s, left 0s, top 0s;
+  opacity: 0;
+}
+
+.holding-image {
+  opacity: 1 !important;
+}
+
+#photoModeHoldFeedbackCircle {
+  stroke-dashoffset: 100;
+  transition: 0.7s;
+}
+
+.holding-image #photoModeHoldFeedbackCircle {
+  stroke-dashoffset: 0;
+  transition: 1.5s;
+}
+
+#photoModeImageBackground {
+  z-index: 12;
+  pointer-events: auto;
+}
+
+.photoModeCollapsed  #photoModeImageBackground,
+.photoModeCapture #photoModeImageBackground {
+  display: none;
+}
+
+.photoModeSave #photoModeImageBackground {
+  display: block;
+}
+
+#photoModeFlash {
+  background-color: white;
+  z-index: 999;
+  transition: 1s;
+  pointer-events: auto;
+}

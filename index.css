@@ -1,0 +1,312 @@
+* {
+  font-family: inherit;
+  box-sizing: inherit;
+}
+
+@font-face {
+  font-family: 'Raleway-Regular';
+  src: url('fonts/raleway-regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/raleway-regular.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Raleway-Bold';
+  src: url('fonts/raleway-bold.woff') format('woff'), /* Modern Browsers */
+       url('fonts/raleway-bold.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+@font-face {
+  font-family: 'Varela-Round';
+  src: url('fonts/VarelaRound-Regular.woff') format('woff'), /* Modern Browsers */
+       url('fonts/VarelaRound-Regular.ttf')  format('truetype') /* Safari, Android, iOS */
+}
+
+body {
+  font-family: 'Varela-Round', sans-serif;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+.absolute-fill {
+  position:absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+#overlay {
+  z-index: 5;
+}
+
+#loadingScreen {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* background-image: url('AuxGraphics/LoadingScreen.jpg'); */
+  z-index: 998;
+}
+
+#loadingImg {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+
+#desktopImgForeground {
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 999;
+}
+
+#logo {
+  visibility: hidden;
+  position: absolute;
+  top: 1vh;
+  left: calc(50vmin - 27vmin);
+  
+  /* width: calc(25vmin + 15vmax);
+  height: calc(10vmin + 10vmax); */
+  width: 54vmin;
+  height: 18vmin;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-image: url('graphics/SpiderVerseLogo3.png'); 
+  z-index: 999;
+}
+
+#topgfx {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  
+  /* width: calc(25vmin + 15vmax);
+  height: calc(10vmin + 10vmax); */
+  width: 75vmin;
+  height: 100vmin;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top center;
+  /* background-image: url('graphics/Portal2.gif');  */
+  z-index: 999;
+}
+
+#portalImg {
+  width: 100%;
+  height: 100%;
+}
+
+#callToAction {
+  visibility: hidden;
+  position: absolute;
+  top: 1vh;
+  left: 20vw;
+  /* transform: translate(-50%, 0); */
+  width: calc(35vmin + 15vmax);
+  height: calc(10vmin + 16vmax);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('graphics/SpiderVerseCTA3.png'); 
+  z-index: 5;
+}
+
+#characterSelector {
+  bottom: 0vh;
+  position: absolute;
+  margin: 0 auto;
+  width: auto;
+  height: 22vh;
+  left: 0;
+  right: 0;
+  display: flex;
+  z-index: 994;
+  justify-content: space-around;
+  /* background-color: black; */
+}
+
+#characterSelect1 {
+  visibility: hidden;
+  /* position: absolute; */
+  /* bottom: 0vh;
+  left: 10vw; */
+  width: 28vw;
+  height: 22vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-image: url('graphics/milesBox.jpg'); 
+  z-index: 995;
+}
+
+#characterSelect2 {
+  visibility: hidden;
+  /* position: absolute;
+  bottom: 0vh;
+  left: calc(50vw - 13vw); */
+  width: 28vw;
+  height: 22vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-image: url('graphics/gwenBox.jpg'); 
+  z-index: 995;
+}
+
+#characterSelect3 {
+  visibility: hidden;
+  /* position: absolute;
+  bottom: 0vh;
+  right: 10vw; */
+  width: 28vw;
+  height: 22vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-image: url('graphics/peterBox.jpg'); 
+  z-index: 995;
+}
+
+#webPrompt {
+  visibility: hidden;
+  position: absolute;
+  bottom: 16vh;
+  left: 0vw;
+  /* transform: translate(-50%, 0); */
+  /* width: calc(35vmin + 40vmax); */
+  width: 100vmin;
+  /* height: calc(10vmin + 40vmax); */
+  height: 100vmin;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('graphics/SelectionScreen_v2_3d.png'); 
+  z-index: 996;
+}
+
+#resetButton {
+  visibility: hidden;
+  position: absolute;
+  bottom: 3vh;
+  left: 5vw;
+  width: 20vw;
+  height: 21vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  background-image: url('graphics/replayIcon.png'); 
+  z-index: 12;
+}
+
+#shareButton {
+  visibility: hidden;
+  position: absolute;
+  bottom: 3vh;
+  right: 5vw;
+  width: 20vw;
+  height: 21vh;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-image: url('AuxGraphics/ShareButton.png'); 
+  z-index: 997;
+}
+#photoModeContainer {
+  bottom: 15vw;
+}
+#vuduLink {
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: block;
+  text-align: center;
+  bottom: 5vh; 
+  pointer-events: auto;
+  z-index: 999;
+}
+
+#vuduLink h6, #vuduLink img {
+  display: inline-block;
+  color: white;
+}
+
+#copyright {
+  /* visibility: hidden; */
+  position: absolute;
+  width: 100%;
+  height: auto;
+  display: block;
+  text-align: center;
+  bottom: 0vh;
+  z-index: 1999;
+}
+
+#lookButton {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  position: absolute;
+  left: calc(15vmin - 2vmax);
+  bottom: 15;
+  padding: 2vmax;
+  pointer-events: auto;
+}
+
+#lookButton img {
+  pointer-events: none;
+  max-height: 10vmin;
+  transition: 0.5s;
+  filter: drop-shadow(1px 1px 7px #00000026)
+}
+
+#photoButton {
+  z-index: 9;
+}
+
+#photoPrompt {
+  visibility: hidden;
+  position: absolute;
+  bottom: 35vh;
+  left: 5vw;
+  /* transform: translate(-50%, 0); */
+  /* width: calc(35vmin + 40vmax); */
+  width: 50vmin;
+  /* height: calc(10vmin + 40vmax); */
+  height: 50vmin;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-image: url('AuxGraphics/photoPrompt.png');
+  z-index: 9999;
+}
+
+.lookCamera #lookLockedIcon {
+  display: none;
+}
+
+.lookLocked #lookCameraIcon {
+  display: none;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+
+
+
