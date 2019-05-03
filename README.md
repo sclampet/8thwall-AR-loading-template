@@ -1,4 +1,4 @@
-# Template For Web AR projects - 8thWall, AFRAME, Three.js
+# Loading Screens Web AR Template - 8thWall
 
 # Overview
 
