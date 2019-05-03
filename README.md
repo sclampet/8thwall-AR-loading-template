@@ -16,11 +16,11 @@ The following is a starting off point for getting started in Web AR. This does n
 
 The following is a live application I have built for Sony that uses this code structure.
 
-* Spider-Man Into The Spider-Verse: https://sites.sonypictures.com/spiderverse/spiderversear/
+* [Spider-Man Into The Spider-Verse](https://sites.sonypictures.com/spiderverse/spiderversear/)
 
 # Getting Started
 
-Please follow this [Getting Started](https://github.com/8thwall/web/tree/master/gettingstarted)
+Please follow this [Getting Started](https://github.com/8thwall/web/tree/master/gettingstarted) to get yourself up and running with 8th Wall so you can run this project. Once you're up and running see the info below regarding graphics.
 
 # Graphics Info
 
