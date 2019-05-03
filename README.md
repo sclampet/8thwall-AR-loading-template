@@ -12,6 +12,12 @@ The following is a starting off point for getting started in Web AR. This does n
 
 * Displaying an overlay graphic when the user turns device to enter Landscape mode.
 
+# Live Examples
+
+The following are live apps I have built that use this code structure.
+
+
+
 # Graphics Info
 
 This project does not include graphics. However, you can add your own and name rename them to the following...
