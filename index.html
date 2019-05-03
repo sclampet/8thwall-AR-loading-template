@@ -3,8 +3,8 @@
 
 <head>
   <meta charset="utf-8">
-  <meta property="og:image" content="https://ignitecreative.ws/spiderverseicon/spiderverseicon.jpg">
-  <title>Spiderv14AllChars</title>
+  <meta property="og:image">
+  <title>LoadingScreensTemplate</title>
 
   <!-- We've included a slightly modified version of A-Frame, which fixes some polish concerns -->
   <script src="//cdn.8thwall.com/web/aframe/8frame-0.8.2.min.js"></script>
@@ -20,87 +20,21 @@
     src="//apps.8thwall.com/xrweb?appKey=shyByu9Z3eVBhLN7riB3LcwjaiLJtl3X6Cg5iRo3bNa6V7ZM4xClHb67HBJ9Qbsa542S4Y"></script>
   <script src="./js/main.js"></script>
   <script src="src/index.js"></script>
-
   <link rel="stylesheet" href="index.css">
 </head>
 
 <body>
   <!-- 2D overlay UI can be done in HTML -->
-  <!-- <div id="overlay" class="center"> -->
   <div id="overlay" class="absolute-fill">
     <div id="loadingScreen">
-        <img id="loadingImg" src="AuxGraphics/LoadingScreen.jpg">
-        <!-- <img id="desktopImgForeground" src="AuxGraphics/DesktopScreenForeground.png"> -->
+      <img id="loadingImg" src="AuxGraphics/LoadingScreen.jpg">
     </div>
-  </div>
-  <img id="logo" src="graphics/SpiderVerseLogo3.png"></img>
-  <div id="callToAction"></div>
-  <div id="characterSelector">
-    <div id="characterSelect1"></div>
-    <div id="characterSelect2"></div>
-    <div id="characterSelect3"></div>
-  </div>
-  <div id="topgfx">
-      <img id="portalImg" src="">
-  </div>
-  <div id="copyright">
-      <img id= "copyrightImg" src="graphics/copyright.png" height="8px" width="163px">
   </div>
 
-  <div id="shareButton"></div>
-  <div id="resetButton"></div>
-  <div id="photoPrompt"></div>
-  <div id="webPrompt"></div>
-  <!-- <photo-mode id="photoButton" style="visibility: hidden;"></photo-mode> -->
-  <div id="vuduLink">
-    <!-- <a href="https://www.vudu.com/content/movies/details/Spider-Man-Into-the-Spider-Verse/918488"
-      target="_blank"><img src="AuxGraphics/VUDUButton.png" height="15px" width="177px"></a> -->
-      <a href="https://www.vudu.com/content/movies/details/Spider-Man-Into-the-Spider-Verse/918488"
-      ><img src="AuxGraphics/VUDUButton.png" height="15px" width="177px"></a>
-  </div>
-  <div id="photoModeContainer" class="absolute-fill">
-  
-    <div id="photoModeShutterButton">
-      <div id="photoModeShutterButtonInner"></div>
-    </div>
-  
-    <div id="photoModeImageContainer">
-      <div id="photoModeSavePrompt">Tap & Hold to Save</div>
-      <img id="photoModeImage">
-      <div id="copyright">
-      </div>
-    </div>
-  
-    <div id="photoModeImageBackground" class="absolute-fill"></div>
-  
-    <div id="photoModeHoldFeedback">
-      <svg style="height:30vmin;width:30vmin" viewBox="0 0 38 38">
-        <circle id="photoModeHoldFeedbackCircle" stroke-width="3" stroke="white" stroke-dashoffset="30" fill="transparent"
-          stroke-dasharray="100 100" stroke-dashoffset="100" style="transform: rotate(-90deg); transform-origin: 50% 50%;"
-          r="16" cx="19" cy="19" />
-      </svg>
-    </div>
-  
-  </div>
-  
-  <div id="photoModeFlash" class="absolute-fill hidden"></div>
-
-
-  <!-- We must add the first-tap component to the scene so it has an effect -->
-  <a-scene photo-mode gesture-detector loading-screen first-tap reset share-button
-    camera-orientation req-camera-permissions shadow="type: pcfsoft">
+  <a-scene loading-screen camera-orientation req-camera-permissions>
 
     <!-- We can define assets here to be loaded when A-Frame initializes -->
     <a-assets>
-      <!-- <a-asset-item id="spideyModel" src="SpidermanNR.gltf"></a-asset-item> -->
-      <!-- <a-asset-item id="spideyModel" src="miles_test_v01.glb"></a-asset-item> -->
-      <a-asset-item id="spideyModel" src="Miles53Jump.glb"></a-asset-item>
-      <!-- <a-asset-item id="peterModel" src="Peter10BurstNoText.glb"></a-asset-item>
-        <a-asset-item id="gwenModel" src="Gwen22BurstNoText.glb"></a-asset-item> -->
-      <a-asset-item id="milesSong" src="WallCrawl_Miles_v6.mp3" preload="auto" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="gwenSong" src="WallCrawl_Gwen_v6.mp3" preload="auto" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="peterSong" src="WallCrawl_Peter_v6.mp3" preload="auto" response-type="arraybuffer"></a-asset-item>
-      <a-asset-item id="prompt" src="WallCrawl_Front_V3.mp3" preload="auto" response-type="arraybuffer"></a-asset-item>
     </a-assets>
 
     <!-- The raycaster will emit mouse events on scene objects specified with the cantap class -->
@@ -108,53 +42,13 @@
           fuse: false;
           rayOrigin: mouse;">
       </a-entity>
-      <a-sound id="promptVoice" src="#prompt"></a-sound>
-      <a-sound id="milesAudio" src="#milesSong"></a-sound>
-      <a-sound id="gwenAudio" src="#gwenSong"></a-sound>
-      <a-sound id="peterAudio" src="#peterSong"></a-sound>
     </a-camera>
 
-    <a-entity id="milesLighting" visible="false">
-      <a-entity id="milesAmbient" light="type: ambient; intensity: .25;"></a-entity>
-      <a-entity id="milesRim" light="type:directional;intensity:6.0;color:#ffffff" position="-4.0 1.6 -6.0"></a-entity>
-      <a-entity id="milesFill" light="type:directional;intensity:3.5;color:#ffffff" position="0.1 3.6 6.0"></a-entity>
-      <a-entity id="milesKey" light="type: directional; castShadow:true; shadowMapHeight: 512, shadowMapWidth: 512; 
-        shadowCameraTop:20; shadowCameraRight:20; color:#fffaf0; intensity:1.5" position="5.5 10.0 1.5"></a-entity>
-    </a-entity>
-
-    <a-entity id="gwenLighting" visible="false">
-      <a-entity id="gwenAmbient" light="type: ambient; intensity: 0.85;"></a-entity>
-      <a-entity id="gwenRim" light="type:directional;intensity:2.0;color:#3719bf" position="-4.0 1.6 -6.0"></a-entity>
-      <a-entity id="gwenFill" light="type:directional;intensity:0.75;color:#ffffff" position="0.10 3.6 6.0"></a-entity>
-      <a-entity id="gwenKey" light="type: directional; castShadow:true; shadowCameraTop:20;
-        shadowCameraRight:20; color:#ffffff; intensity:1.0" position="5.5 10.0 1.5"></a-entity>
-    </a-entity>
-
-    <a-entity id="peterLighting" visible="false">
-      <a-entity id="peterAmbient" light="type: ambient; intensity: .5;"></a-entity>
-      <a-entity id="peterRim" light="type:directional;intensity:3.0;color:#ffffff" position="-4.0 1.6 -6.0"></a-entity>
-      <a-entity id="peterFill" light="type:directional;intensity:1.0;color:#ffffff" position="0.10 3.6 6.0"></a-entity>
-      <a-entity id="peterKey" light="type: directional; castShadow:true;
-        shadowCameraTop:20; shadowCameraRight:20; intensity:1.0" position="5.5 10.0 1.5"></a-entity>
-    </a-entity>
-
-
-    <a-entity id="character1" gltf-model="#spideyModel" shadow="cast: true;"
-      visible="false" scale="5 5 5"></a-entity>
-    <a-entity id="character2" gltf-model="Gwen43Jump.glb" shadow="cast: true;"
-      visible="false" scale="5 5 5"></a-entity> 
-    <a-entity id="character3" gltf-model="Peter40bJump.glb" shadow="cast: true;"
-      visible="false" scale="5 5 5"></a-entity>
     <a-entity id="ground" class="cantap" geometry="primitive: box"
       material="color: #ffffff; transparent: true; opacity: 0.0" scale="1000 2 1000" position="0 -1 0" shadow-material
       shadow>
     </a-entity>
-      <!-- <a-plane material="color: #ffffff; transparent: true; opacity: 0.0" color="#7CFC00" height="50" width="50" rotation="0 0 90" position="0 0 -50" shadow-material shadow></a-plane> -->
-
-
   </a-scene>
-
-
 </body>
 
 </html>
